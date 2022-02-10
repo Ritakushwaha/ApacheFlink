@@ -27,18 +27,22 @@ public class App
     {
       public boolean filter(String value)
       {
-        return value.startsWith("N");
+        return value.startsWith("R");
       }
     });
     DataSet<Tuple2<String, Integer>> tokenized = filtered.map(new Tokenizer());
     
     DataSet<Tuple2<String, Integer>> counts = tokenized.groupBy(new int[] { 0 }).sum(1);
+
     if (params.has("output"))
     {
       counts.writeAsCsv(params.get("output"), "\n", " ");
       
       env.execute("WordCount Example");
+    }else{
+      System.out.println(counts);
     }
+
   }
   
   public static final class Tokenizer

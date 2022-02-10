@@ -46,3 +46,21 @@ export PATH=/opt/flink-1.14.3/bin/:$PATH
       <version>2.0.0-alpha6</version>
     </dependency>
 ```
+
+## Create jar file
+```
+mvn cleancompile
+```
+```
+mvn package
+```
+
+## Start the cluster
+```
+./bin/start-cluster.sh
+```
+
+## Run the jar file
+```
+./bin/flink run /home/rita/Documents/ApacheFlink/WordCount/target/WordCount-1.0-SNAPSHOT.jar --input /home/rita/Documents/ApacheFlink/WordCount/input.txt --output /home/rita/Documents/ApacheFlink/WordCount/output.csv
+```
