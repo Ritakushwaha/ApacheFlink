@@ -36,3 +36,13 @@ type -a flink
 ```
 export PATH=/opt/flink-1.14.3/bin/:$PATH
 ```
+
+## Error - SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder". Add below dependency to resolve this.
+```
+<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.0-alpha6</version>
+    </dependency>
+```
