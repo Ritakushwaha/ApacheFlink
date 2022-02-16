@@ -85,7 +85,7 @@
         </filters>
             <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                    <mainClass>com.datastream.App</mainClass>
+                    <mainClass>com.fold.App</mainClass>
                 </transformer>
     
                 <!-- append default configs -->
