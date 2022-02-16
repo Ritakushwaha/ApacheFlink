@@ -68,4 +68,31 @@ mvn package
 ./bin/flink run /home/rita/Documents/ApacheFlink/WordCount/target/WordCount-1.0-SNAPSHOT.jar --input /home/rita/Documents/ApacheFlink/WordCount/input.txt --output /home/rita/Documents/ApacheFlink/WordCount/output.csv
 ```
 
+# Word Count program using DataStream API
+
+## Create jar file
+```
+mvn cleancompile
+```
+```
+mvn package
+```
+
+## Start the cluster
+```
+./bin/start-cluster.sh
+```
+
+## Up the socket
+```
+nc -l 9999
+```
+
+## Run the jar file
+```
+./bin/flink run /home/rita/Documents/ApacheFlink/WordsCount/target/WordsCount-1.0-SNAPSHOT.jar
+```
+
+
+
 
